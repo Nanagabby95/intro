@@ -17,7 +17,7 @@ body{
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 1em 3em 0;
+      margin: 2em 3em 0;
 }
 
 .nav-container{
@@ -89,11 +89,138 @@ h1{
 .icons{
       margin-top: 10rem;
       margin-left: -1rem;
-
-      
-
 }
 
 .icons img{
       margin-left: 1em;
 }
+
+ion-icon{
+      display: none;
+}
+
+@media only screen and (max-width: 600px){
+      #closemenu{
+          display: block;
+          font-size: 25px;
+          color: #fff;
+          position: absolute;
+         
+          
+      }
+
+      nav img{
+            margin-top: 1em;
+      }
+
+
+      #icon{
+          display: block;
+          font-size: 25px;
+          position: absolute;
+          left: 350px;
+          top: 45px;
+      }
+      #sidemenu img{
+            display: none;
+      }
+  
+      .nav ul{
+         background: purple;
+         position: fixed;
+         top: -20px;
+         right: -200px;
+         width: 200px;
+         text-align: center;
+         height: 100vh;
+         padding-top: 50px;
+         z-index: 2;
+         transition: right 0.5s;
+         display: block;
+      }
+      
+      ul{
+          display: block;
+          gap: .1em;
+  
+  
+      }
+  
+   
+      
+      nav ul a{
+          display: block;
+          font-size: 14px;
+          margin-top: 1em;
+          color: white;
+      }
+  
+      nav li{
+          display: block;
+      }
+      
+      nav ul li a{
+          justify-content: center;
+          align-items: center; 
+          padding: 14px;
+          color: white;
+          text-decoration: none;
+          font-size: 18px;
+          display: block;
+      }
+      
+      a:hover{
+          color: rgb(223, 14, 14);
+          border: transparent;
+      }
+      nav ion-icon{
+            position:absolute;
+            top: 25px;
+            left: 150px;
+        }
+
+        .secondary-nav{
+            display: none;
+        }
+
+        .hero{
+            display: flex;
+            flex-direction: column;
+        }
+        .hero-sec img{
+            width: 100%;
+            object-fit: cover;
+            order: 2;
+            margin: 1em;
+        }
+
+        .hero-design h1{
+            display: inline-block;
+            font-size: 25px;
+           padding: 0;
+           margin: 0;
+        }
+
+        .icons{
+            width: 100%;
+            align-items: center;
+            text-align: center;
+        }
+
+        .icons{
+            margin-top: 0;
+            margin-left: 0;
+            position: relative;
+            top: 400px;
+            display: flex;
+            gap: 2em;
+            align-items: center;
+            justify-content: center;
+      }
+      
+      .icons img{
+            margin-left: 0;
+      }
+
+      }
+

@@ -5,31 +5,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>intro-page</title>
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
   <header>
+    <div class="nav-container"></div>
     <nav class="nav">
-      <div class="nav-container">
-        
+
         <img src="./images/logo.svg" alt="">
 
-        <ul>
-          <li><a href="">Features</a><img src="/images/icon-arrow-down.svg" alt=""></li>
-          <li><a href="">Company</a><img src="/images/icon-arrow-down.svg" alt=""></li>
-          <li><a href="">Careers</a></li>
-          <li><a href="">About</a></li>
-        </ul>
+        <ul id="sidemenu">
+          <li><a href="https://jobgether.com/search-offers?meta.locations=622a659af0bac38678ed13a0&sort=relevance&utm_source=google&utm_medium=cpc&utm_campaign={campaign_name}&utm_id=19628999928&utm_term=remote+job&utm_content=145906236179&gclid=CjwKCAiAjPyfBhBMEiwAB2CCIgSfaDvTUfFqICJFfmweRZYDTYDLxHCy238kuU5BoGpB4xqdPWSORRoCFOMQAvD_BwE">Features</a><img src="/images/icon-arrow-down.svg" alt=""></li>
+          <li><a href="https://jobgether.com/search-offers?meta.locations=622a659af0bac38678ed13a0&sort=relevance&utm_source=google&utm_medium=cpc&utm_campaign={campaign_name}&utm_id=19628999928&utm_term=remote+job&utm_content=145906236179&gclid=CjwKCAiAjPyfBhBMEiwAB2CCIgSfaDvTUfFqICJFfmweRZYDTYDLxHCy238kuU5BoGpB4xqdPWSORRoCFOMQAvD_BwE">Company</a><img src="/images/icon-arrow-down.svg" alt=""></li>
+          <li><a href="https://jobgether.com/search-offers?meta.locations=622a659af0bac38678ed13a0&sort=relevance&utm_source=google&utm_medium=cpc&utm_campaign={campaign_name}&utm_id=19628999928&utm_term=remote+job&utm_content=145906236179&gclid=CjwKCAiAjPyfBhBMEiwAB2CCIgSfaDvTUfFqICJFfmweRZYDTYDLxHCy238kuU5BoGpB4xqdPWSORRoCFOMQAvD_BwE">Careers</a></li>
+          <li><a href="https://jobgether.com/search-offers?meta.locations=622a659af0bac38678ed13a0&sort=relevance&utm_source=google&utm_medium=cpc&utm_campaign={campaign_name}&utm_id=19628999928&utm_term=remote+job&utm_content=145906236179&gclid=CjwKCAiAjPyfBhBMEiwAB2CCIgSfaDvTUfFqICJFfmweRZYDTYDLxHCy238kuU5BoGpB4xqdPWSORRoCFOMQAvD_BwE">About</a></li>
+          <ion-icon id="closemenu" name="close" onclick="closemenu()"></ion-icon>
+            </ul>
+            <ion-icon class="menu-icon" id="icon" name="menu" onclick="openmenu()"></ion-icon>
         
       </div>
 
       <div class="secondary-nav">
         
-        <li><a href="">Login</a></li>
+        <li><a href="https://jobgether.com/search-offers?meta.locations=622a659af0bac38678ed13a0&sort=relevance&utm_source=google&utm_medium=cpc&utm_campaign={campaign_name}&utm_id=19628999928&utm_term=remote+job&utm_content=145906236179&gclid=CjwKCAiAjPyfBhBMEiwAB2CCIgSfaDvTUfFqICJFfmweRZYDTYDLxHCy238kuU5BoGpB4xqdPWSORRoCFOMQAvD_BwE">Login</a></li>
 
-        <button>Register</button>
-
+        <a href="https://jobgether.com/search-offers?meta.locations=622a659af0bac38678ed13a0&sort=relevance&utm_source=google&utm_medium=cpc&utm_campaign={campaign_name}&utm_id=19628999928&utm_term=remote+job&utm_content=145906236179&gclid=CjwKCAiAjPyfBhBMEiwAB2CCIgSfaDvTUfFqICJFfmweRZYDTYDLxHCy238kuU5BoGpB4xqdPWSORRoCFOMQAvD_BwE"><button>Register</button></a>
+ 
 
       </div>
     </nav>
@@ -41,7 +44,7 @@
 
         <p>Get your team in sync , no matter the location . <br> Streamline processes , create team rituals , and <br> watch productivity soar</p>
 
-        <button>Learn more</button>
+        <a href="https://jobgether.com/search-offers?meta.locations=622a659af0bac38678ed13a0&sort=relevance&utm_source=google&utm_medium=cpc&utm_campaign={campaign_name}&utm_id=19628999928&utm_term=remote+job&utm_content=145906236179&gclid=CjwKCAiAjPyfBhBMEiwAB2CCIgSfaDvTUfFqICJFfmweRZYDTYDLxHCy238kuU5BoGpB4xqdPWSORRoCFOMQAvD_BwE"><button>Learn more</button></a>
 
         <div class="icons">
           <img src="./images/client-audiophile.svg" alt="">
@@ -62,7 +65,24 @@
 
 
   </header>
-
+  <script>
+      $(document).ready(function(){
+          $('#icon').click(function(){
+              $('ul').toggleClass('show');
+          });
+      });
+  </script>
   
+  <script>
+      var sidemenu=document.getElementById("sidemenu");
+      function openmenu() {
+          sidemenu.style.right= "0";
+      }
+      function closemenu() {
+          sidemenu.style.right= "-200px";
+      }
+  </script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </body>
 </html>
